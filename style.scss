@@ -1,0 +1,62 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$brand: blue;
+$w: #fff;
+@mixin Flex($a){
+    display: flex;
+    justify-content: $a;
+}
+.con{
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+}
+header
+{
+    background: $brand; color: $a;
+    padding: 10px 0;
+    .con
+    {
+        @include Flex(space-between);
+    }
+}
+nav
+{
+    border: 2px solid $brand;
+    padding: 10px 0;
+    ul
+    {
+        @include Flex(center);
+        list-style: none;
+        gap: 20px;
+    }
+}
+.services
+{
+    padding: 30px 0;
+    img
+    {
+        width: 100%;
+    }
+    .con
+    {
+        @include Flex(space-between);
+        gap: 20px
+
+    }
+}
+footer
+{
+    padding: 15px;
+    background: $brand;
+    color: $a;
+    .con
+    {
+        @include Flex(center);
+        gap: 20px;
+    }
+}
